@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: all 0.15s;
+    Box-sizing: border-box;
+    Scroll-behavior:smooth;
+    background-color: #E4F9F5;
+    color: black;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #40514E;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    height: 70px;
+}
+
+header a:hover{
+    color: #30F3CA;
+}
+
+header a{
+    text-decoration: none;
+    color: #E4F9F5;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.fullTitle{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    gap: 5px;
+}
+
+.logo {
+    width: 50px;
+    height: auto; 
+}
+
+.main{
+    margin-top: 70px;
+}
+
+.profilePic{
+    width: 60px;
+    margin: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.profilePicLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginButtons{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    gap: 10px;
+}
+
+.loginButtons a{
+    text-decoration: none;
+    color: #E4F9F5;
+    font-weight: 600;
+    font-size: 15px;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.loginBtn{
+    background-color: #30F3CA;
+}
+
+.loginBtn:hover{
+    background-color: #1FCEA3;
+    transform: scale(0.9);
+}
+.loginBtn:active{
+    background-color: #0FAE7A;
+    transform: scale(0.9);
+}
+
+.createBtn{
+    background-color: #11999E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.createBtn:hover{
+    background-color: #0A8084;
+    transform: scale(0.9);
+}
+
+.createBtn:active{
+    background-color: #06616A;
+    transform: scale(0.9);
+}
+
+.loctionSearch{
+    display: flex;
+    background-color: #11999E;
+    height: 55px;
+    align-items: center;
+    padding-left: 30px;
+    border-radius:0 0 10px 10px;
+}
+
+.locationSearch{
+    background: none;
+    border-radius: 10px;
+    border: solid 2px #E4F9F5;
+    color: #40514E;
+    padding: 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+    height: 33px;
+}
+
+.locationSearch:hover{
+    background-color: #E4F9F5;
+}
+.locationSearch:focus{
+    outline: none;
+}
+.locationSearch::placeholder{
+    color: #E4F9F5;
+}
+.locationSearch option{
+    color: #E4F9F5;
+    background-color: #2D6E6E;
+    padding: 10px 2px;
+    font-weight: bold;
+}
+
+.searchBtn{
+    border: solid 2px #E4F9F5;
+    border-radius: 10px;
+    color: #40514E;
+    height: 33px;
+    cursor: pointer;
+    background-color: #E4F9F5;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.searchBtn:hover{
+    background-color:transparent;
+    transform: scale(0.9);
+}
+.searchBtn:active{
+    background-color:transparent;
+    transform: scale(0.9);
+}
+
+footer{
+    background-color:  #40514E;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    height: 55px; 
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plusIcon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.createPostBtn{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #30F3CA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.createPostBtn:hover{
+    background-color: #1FCEA3;
+    transform: scale(0.9);
+}
+.createPostBtn:active{
+    background-color: #1FCEA3;
+    transform: scale(0.9);
+}
+
+.postAreaEmpty{
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postAreaEmpty p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.postArea{
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+    padding-left: 50px;
+    flex-wrap: wrap;
+    padding-bottom: 200px;
+}
+
+
+.postIcon{
+    width: 30px;
+}
+
+.post{
+    background-color: #40514E;
+    width: 290px;
+    height: 370px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.post:hover{
+    transform: scale(1.02);
+    box-shadow: 10px 10px 36px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 36px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 36px -3px rgba(0,0,0,0.75);
+}
+
+.post:active{
+    transform: scale(1.02);
+    box-shadow: 10px 10px 36px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 36px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 36px -3px rgba(0,0,0,0.75);
+}
+
+.postTop{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b3634;
+    height: 150px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.postInfo{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding-left: 10px;
+}
+
+.postInfo div{
+    color: #E4F9F5;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.postInfo div p{
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 768px){
+    .postArea{
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        gap: 20px;
+        padding-left: 0;
+    }
+}
