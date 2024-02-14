@@ -11,7 +11,8 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 if(isset($_POST['addPost']) && isset($_POST['bookTitle'])){
     if(strlen($_POST['bookTitle']) > 3){
         $bookTitle = $_POST['bookTitle'];
-        $sql = "INSERT INTO posts (userID, bookTitle) VALUES ((SELECT userID FROM users WHERE username = '$user'), '$bookTitle')";
+        $currentDate = date("Y-m-d");
+        $sql = "INSERT INTO posts (userID, bookTitle,CreatedDate) VALUES ((SELECT userID FROM users WHERE username = '$user'), '$bookTitle','$currentDate')";
         if(mysqli_query($conn, $sql)){
             header('Location: index.php');
         } else {

@@ -28,7 +28,8 @@ if(isset($_POST['login'])){
 <div class="login">
 <p>Login</p>
 <form action="login.php" method="post">
-    <input type="text" name="username" placeholder="Username" class="input" autocomplete="off" required>
+    <input type="text" name="username" placeholder="Username" class="input" autocomplete="off"
+    value="<?php if(isset($_POST['username'])) echo $_POST['username']?>" required>
     <input type="password" name="password" placeholder="Password" class="input" autocomplete="off" required>
     <input type="submit" value="login" name="login" class="loggedBtn">
 </form>

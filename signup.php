@@ -27,7 +27,8 @@ if(isset($_POST['created'])){
         
     }
     else {
-     $sqlInsert = "INSERT INTO users (username, password, phoneNum, email, location) VALUES ('$createUsername', '$createPassword', '$createPhoneNum', '$createEmail', '$locations')";//adding data
+    $currentDate = date("Y-m-d");
+     $sqlInsert = "INSERT INTO users (username, password, phoneNum, email, location, CreatedDate) VALUES ('$createUsername', '$createPassword', '$createPhoneNum', '$createEmail', '$locations','$currentDate')";//adding data
 
     if(mysqli_query($conn, $sqlInsert)){
         header('Location: index.php');
@@ -51,10 +52,18 @@ mysqli_close($conn);
 <div class="createAcc">
 <p>Create Account</p>
 <form action="signup.php" method="post">
-    <input type="text" name="createUsername" placeholder="Username" class="input" autocomplete="off" required>
-    <input type="password" name="createPassword" placeholder="Password" class="input" autocomplete="off" required>
-    <input type="text" name="createPhoneNum" placeholder="Phone Number" class="input" autocomplete="off" required>
-    <input type="email" name="createEmail" placeholder="email" class="input" autocomplete="off" required>
+    <input type="text" name="createUsername" placeholder="Username" class="input" autocomplete="off"
+    value="<?php if(isset($_POST['createUsername'])) echo $_POST['createUsername']?>" required >
+
+    <input type="password" name="createPassword" placeholder="Password" class="input" autocomplete="off" 
+    value="<?php if(isset($_POST['createPassword'])) echo $_POST['createPassword']?>" required>
+
+    <input type="text" name="createPhoneNum" placeholder="Phone Number" class="input" autocomplete="off" 
+    value="<?php if(isset($_POST['createPhoneNum'])) echo $_POST['createPhoneNum']?>" required>
+
+    <input type="email" name="createEmail" placeholder="email" class="input" autocomplete="off"
+    value="<?php if(isset($_POST['createEmail'])) echo $_POST['createEmail']?>" required>
+
     <select id="locations" name="locations" class="location">
             <option value="Beirut">Beirut</option>
             <option value="Tripoli">Tripoli</option>
